@@ -1,19 +1,23 @@
  * {
     box-sizing: border-box
  }
+ /*     BODY   */
 body{
 	font-family: "Avenir Next","serif","Lora";
 	padding:0px;
 	margin:0px;
-	background: url("") no-repeat;
+	background: url(IMG_20180912_170752.jpg) no-repeat;
 	background-size:cover;
 }
 .header * {
-  color:black;
+  color:white;
 }
+/*             HEADER LOGO      */
 .header-logo {
-   color:white;
+   color:;
    font-family:'lora','serif';
+   margin-top:10px;
+
 }
 
 
@@ -21,12 +25,14 @@ body{
 /*header background color & style*/
 .header{
 	background-color:teal;
+	 background: url(IMG_20180912_170804.jpg);
+	 background-size:cover;
 	height:100px;
 	width:100%;
-	margin:0px  auto;
+	margin:0px;
 
 	}
-/*header logo style*/
+/*            HEADER LOGO     */
  .header-logo{
       float:left;
 
@@ -37,23 +43,24 @@ body{
       padding-top:20px;
       font-family: "Avenir Next","serif" ,"lora";
  }
-/*          search-box input   */
+/*              SEARCH BOX INPUT     */
 .search-box input{
 
       height:30px;
       display:block;
       width:90%;
       box-sizing:border-box;
-      background:black;
+      background:white;
 
       padding-top:10px;
 
       outline:none;
-      color:#ddd;
+      color:black;
       transition:0.5s;
 
       border-radius:5px;
-      margin-top:22px;
+      margin-top:18px;
+
       border:0;
 
 }
@@ -61,24 +68,35 @@ body{
 .search-btn{
       color:#1da1f3;
       float:left;
-      height:30px;
-      width:10%;
+      height:px;
+      width:px;
+
       background:white;
-      text-decoration:none;
-      display:flex;
+      text-decoration:;
+      display:block;
       justify-content:center;
       border-radius:5px;
       margin-left:90%;
-      margin-top:-12.5%;
-      padding:2%;
+      margin-top:-25%;
+      padding:2px;
+
       border-radius:5px;
+      background:none;
+
 }
+
 /*    MENU BUTTON/MENU ICON        */
 
 .menu-btn{
     display:none;
     padding-top:20px;
     padding-left:40px;
+}
+/*     header list    */
+
+ul{
+podsition:absolute;
+
 }
 .header-list ul{
 float:right;
@@ -87,11 +105,14 @@ margin-right:75px;
 position :relative;
 font-size:;
 margin-left:-40px;
+display:block;
+font-color:white;
 
 }
 .header-list ul li{
-float:left;
-display:inline-block;
+float: left;
+position:relative;
+display:block;
 margin-top:10px;
 margin-left:5px;
 margin-right:0px;
@@ -104,16 +125,54 @@ background:;
       text-decoration:none;
       line-height:40px;
       font-size:12px;
+      color:white;
       padding:9px 15px;
+      width:px;
+      display:block;
+      border-radius:10px;
+
 
 }
 
 .header-list ul li a:hover{
-background:darkcyan;
+background:transparent;
+
 transition:0.5s;
 box-shadow: 0 0 5px #66ffff;
 border-radius:5px;
 
+}
+.header-list ul li ul li a:hover{
+background:transparent;
+
+transition:0.5s;
+box-shadow: 0 0 5px #66ffff;
+border-radius:5px;
+
+}
+/*        header sublist   */
+
+.header-list ul li ul li {
+float:none;
+margin:0px;
+padding:0px;
+ background: transparent;
+
+
+}
+.header-list ul li ul{
+display:none;}
+
+.header-list ul li:hover ul {
+display:block;
+}
+
+
+/*      logout    */
+
+
+.LOGOUT{
+     font-color:red;
 }
 
 /*main body background color and style*/
@@ -124,10 +183,13 @@ border-radius:5px;
 
 /*footer color and style*/
 .footer{
-	background-color:black;
+	background: url(IMG_20180912_170804.jpg);
+
+	background-size:cover;
+
 	height:325px;
     width:100%;
-    margin:0 auto;
+    margin:0;
 	}
 .footer * {
     color:white;
@@ -161,15 +223,16 @@ border-radius:5px;
       padding-right:10px;
       padding-bottom:2px;
       margin:auto;
-      margin-bottom:1% ;
+      margin-top:30px ;
+      margin-left:20px;
 
       box-sizing:border-box;
 
 }
 .footer-list{
-         float:left;
+         float:;
 }
-/*             contact form    */
+/*               FOOTERLIST (CONTACT US)   */
 .contact-details li{
 
      list-style:none;
@@ -186,7 +249,9 @@ border-radius:5px;
      box-sizing:border-box;
 
  }
-                 /*    footer's sublist    */
+ .contact-details{
+ float:left;}
+                 /*    FOOTER SUBLIST  (SOCIAL MEDIA ICONS)    */
 .sublist li {
 
      list-style:none;
@@ -207,24 +272,33 @@ border-radius:5px;
      font-size:.8em;
 
  }
-   /*              quick links      */
+
+   /*                 FOOTER LIST (QUICKLINK)        */
 .quicklink li {
 
      list-style:none;
-     float:left;
+     float:none;
      /*change the top and bottom padding 20px and left right padding 15px*/
-     padding-top:0.2%;
+     padding-top:%;
      padding-bottom:0.2%;
      padding-left:3%;
      padding-right:3%;
      border:px solid white;
-     margin-left:20% ;
-     margin-right:20%;
+     margin-left:2% ;
+     right:  px;
+     margin-top:1%;
      overflow:;
      box-sizing:border-box;
+     text-align:center;
+
 
 
  }
+ .quicklink{
+ margin-top:2%;
+ margin-left:-7%;
+ }
+ /*               FOOTER LIST   */
 .footer-list a{
      font-color:white;
      text-decoration:none;
@@ -234,64 +308,37 @@ border-radius:5px;
      margin:auto;
 
 }
-.footer-list :hover{
+.footer-list li :hover{
      background:grey;
      transition:0.5s;
+     box-shadow: 0 0 10px #66ffff;
+     border-radius:5px;
 }
-/*           footer heading   */
+/*              FOOTER HEADINGS   */
 h3{
     text-align:center;
     padding:5px;
     border:px solid white;
-    margin-top:;
+    margin-top:14%;
     overflow:hidden;
+    margin-left:10px;
 
 
 
 }
-   /*                contactform  */
-.contact-section{
-    max-width:75%;
-    margin:auto;
-    padding:5px 5px;
-    overflow:hidden;
+/*        DESCRIPTION SECTION      */
+.description{
+width:85%;
+
+padding:30px;
+margin-top:20%;
 
 }
-.contact-form-text{
-   display:block;
-   width:100%;
-   box-sizing:border-box;
-   background:darkgrey;
-   padding:5px 5px ;
-   outline:none;
-   color:#ddd;
-   transition:0.5s;
-   margin:1.5%;
-   border:0;
-   text-color:black;
 
-}
-.contact-form-text:focus{
-   box-shadow:0 0 5px 5px white;
-}
-textarea.contact-form-text{
-   resize:none;
-   height:100px;
-}
-/*          contact form buttom     */
-.contact-form-btn{
-   float:right;
-   border:0;
-   background:;
-   color:black;
-   padding:2px 5px;
-   curser:pointer;
-}
-.contact-form-btn:hover{
-   background: #2980b9;
-   transistion:0.5s;
-}
-/*          footer-bottom      */
+
+
+
+/*             FOOOTER BOTTOM          */
 .footer-bottom{
      height:40px;
      background-color:darkgrey;
@@ -309,15 +356,19 @@ textarea.contact-form-text{
     .header{
         position:relative;
     }
-
-/*    header list  */
+    body{
+    margin:0px;
+    overflow:;
+    }
+/*               HEADER LIST        */
+    .header{
+     width:%;
+     margin-left:0px;
+}
     .header-list ul {
         width: 100%;
-        background-color:black;
+        background-color:;
         padding-bottom:2px;
-        float:left;
-        margin-right:%;
-        margin:1px;
         padding:1px;
         margin:0px;
         padding-left:px;
@@ -325,23 +376,20 @@ textarea.contact-form-text{
 
 
     }
-
-    .header-list ul{
-        max-height:px;
-        overflow:hidden;
-    }
-
+    .header-list ul {
+    color:black;}
     .header-list ul li {
-        width: 100%;
-        background-color:teal;
+        width: 80%;
+        background-color:;
         margin:%;
         font-size:.8em;
     }
 
 
 
-     .header-list ul li a:hover {
-        background:#;
+     .header-list ul li ul a:hover {
+        background:;
+        color:black;
         transition:0.5;
      }
 
@@ -351,21 +399,45 @@ textarea.contact-form-text{
         color:black;
 
      }
- /*               logout button   */
-     .LOGOUT{
-        color:red;
-     }
-     .LOGOUT :hover {
-         background: red;
-         transistion:0.5s;
+     .header-list ul li ul  li{
+     background-color:transparent;
+     width:%;}
+
+      .header-list ul li {
+       box-sizing:border-box;
+       width:100%;
+       text-align:center;
+       padding: 0px;
+
+      }
+      .header-list ul li a:hover{
+background: darkcyan;
+
+transition:0.5s;
+box-shadow: 0 0 5px #66ffff;
+border-radius:5px;
+
+}
+ .header-list ul li ul li a:hover{
+background: darkcyan;
+
+transition:0.5s;
+box-shadow: 0 0 5px #66ffff;
+border-radius:5px;
+}
+ /*               LOGOUT      */
+     .LOGOUT a{
+        font-color:red;
      }
 
-/*       main    */
+/*             MAIN         */
+
      .main{
        background-color:;
      }
 
-/*         menu button   */
+/*         MENU BUTTON/ICON   */
+
     .menu-btn{
      display:block;
      right:30px;
@@ -375,29 +447,52 @@ textarea.contact-form-text{
      position:absolute;
      }
 
-/*           header logo    */
+/*           HEADER LOGO   */
+
      .header-logo{
      margin-left:0px;
      font-family:"lora","serif";
-     font-size:1.1em;
+     font-size:1.3em;
      }
-/*        footer   */
+/*        FOOTER        */
+
      .footer{
      width:100%;
+     margin:0px;
+     padding:0px;
+
+
      }
+     /*   FOOTER SECTION   */
+
      .footer-section{
       width:100%;
-      background-color:black;
+      margin:0 px;
+      paddding:0px;
+
+    background: url(IMG_20180912_170804.jpg);
+
+	background-size:cover;
+	background-repeat:no-repeat
+
+
       margin-right:0px;
      }
+     /*     FOOTER LOGO   */
      .footer-logo{
       font-size:em;
+      margin-left:20%;
+      margin-top:10%;
+      height:35px;
 
       }
+      /*     FOOTER HEADINGS     */
       .h3{
        font-size:.9em;
       }
+/*       CONTACT US     FOOTER SUBLIST  */
       .sublist li{
+
          font-size:.7em;
          padding:px;
          margin-right:10px;
@@ -408,42 +503,66 @@ textarea.contact-form-text{
 
       }
 
-/*      body   */
+
+/*                 BODY       */
       body{
        margin:0px;
        padding:0px;
+       margin-right:0px;
+       padding-right:0px;
       }
 
-  /*             .show       */
+  /*             SHOW      */
       .showing{
         max-height:em;
       }
-      .header-list ul li {
-       box-sizing:border-box;
-       width:100%;
-       text-align:center;
-       padding:px 0;
 
-      }
 
- /*         search button   */
+ /*         SEARCH BUTTON   */
       .search-btn{
-         margin-top:-17.5%;
-         padding:5%;
+         margin-top:-9%;
+         padding:5;
+         margin-left:65%;
+         background-color:;
 
+
+      }
+      /*   SEARCH INPUT   */
+      .search-box input{
+         width:50%;
+         margin-left:15%;
+         padding:5px;
       }
 
 
-    /*           footer bottom   */
+    /*           FPOOTER BOTTOM  */
       .footer-bottom{
      height:100%;
-       color:grey;
-       font-color:black;
+      color:white;
+       background:black;
      font-size:.7em;
      text-align:center;
+     margin-top:0px;
+     padding:0px;
 
 
 
     }
- }
- }
+    /*      WEBSITE DESCRIPTION   */
+    .description{
+       margin-top:20%;
+       margin-left:10%;
+       height:100%;
+       width:75%;
+       text-alignment:center;
+
+       }
+
+       .contact details{
+       float:left;
+       margin-left:10%;
+       }
+    }
+
+
+    

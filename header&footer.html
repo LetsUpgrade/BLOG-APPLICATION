@@ -4,7 +4,7 @@
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width , intial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Bloggers  </title>
+<title>Bloggers adda  </title>
 <script src="https://kit.fontawesome.com/0c18d196d6.js" crossorigin="anonymous"></script>
 <link rel ="Stylesheet" href ="homepage stylesheet.css">
 
@@ -12,7 +12,7 @@
            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
              integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
              crossorigin="anonymous"></script>
-
+     <!--       JQUERY  CUSTOM   --->
               <script>
                   $(document).ready(function(){
                   $('#menu_btn').on('click' , function(){
@@ -22,60 +22,95 @@
               </script>
 </head>
 <body>
-  <!-----navigation bar------->
+  <!--          NAVIGATION BAR        -->
 	<div class="header">
 
-        <!--------header logo-------->
+        <!--           HEADER LOGO      -->
+
         <div class="header-logo"> <i class="fas fa-pen-fancy"></i> BLOGGERS ADDA
-            <!--------------search bar--------->
-            <div class ="search-box">
-                <input type="text" placeholder="Search">
-                    <a class="search-btn" href=""><i class="fas fa-search fa-xs"></i></a>
-             </div>
+
+
         </div>
+
+         <!--       MENU BUTTON   -->
+
         <span id="menu_btn" ><i class="fas fa-bars menu-btn id= "></i></span>
 
-        <!---------menu,header-list------------->
+        <!--            HEADER LIST       -->
             <div class="header-list" id="header_list">
                 <ul>
 
                    <li> <a href="">HOME</a> </li>
                    <li> <a href="">CREATE BLOG</a> </li>
-                   <li> <a href="">LOGIN</a> </li>
-                   <li> <a href="">SIGN-UP</a> </li>
-                    <li ><a href="" class="PROFILE SETTING" >PROFILE SETTING</a> </li>
-                    <li> <a href=""class="LOGOUT" >LOGOUT</a> </li>
-                    <li>
-                      <a href="">
-                        <i class="fas fa-user fa-2x"></i>
+                   <li> <a href="">SIGN-UP / LOGIN</a> </li>
+                   <li> <a href="">PROFILE   <i class="fas fa-caret-down  ">  </i></a>
+                       <!--       HEADER SUBLIST   -->
+                       <ul>
+                           <li><a href="">SETTING</a></li>
+                           <li><a href="">EDIT</a></li>
+                           <li> <a href=""class="LOGOUT" >LOGOUT</a> </li>
 
-                      </a>
-                    </li>
+
+                       </ul>
+
+                   </li>
+                    <!--             SEARCH BOX   --->
+                     <li class ="search-box">
+                      <input type="text" placeholder="Search">
+                    <a class="search-btn" href=""><i class="fas fa-search fa-lg"></i></a>
+                     </li>
 
                   </ul>
             </div>
     </div>
 
 
-
+<!--             MAIN BODY          --->
   <div class="main">
 
   </div>
 
-  <!------footer--->
+  <!--            FOOTER       -->
   <div class="footer">
         <div class="footer-section about ">
             <div class="footer-logo"> <i class="fas fa-pen-fancy"></i>BLOGGERS ADDA </div>
-            <!--------ABOUT SECTION------->
-            <br>
-            <br>
-           <h3>CONTACT DETAILS</h3>
-                <div class="footer-list">
+            <!--    ABOUT SECTION     --->
+
+
+
+                <p class="description"> BLOGGERS ADDA is a blogging website where user can write their stuff</p>
+        </div>
+        <!--        Quicklinks   -->
+        <div class="footer-section links">
+
+
+            <h3>QUICKLINKS</h3>
+               <div class="footer-list">
+                   <ul class=" quicklink">
+                       <li><a href ="">Categories</a></li>
+                       <li><a href="">Recent Blogs</a></li>
+                       <li><a href ="">Trending Blogs</a></li>
+                       <li><a href="">Home  </a></li>
+                       <li><a href="">Profile </a></li>
+                       <li><a href="">About us</a></li>
+                       <li><a href="">Terms & Conditions</a></li>
+                       <li><a href=""></a></li>
+
+                   </ul>
+               </div>
+        </div>
+      <!--          CONTACT US     -->
+        <div class="footer-section contact-us">
+
+
+              <h3>CONTACT US</h3>
+               <div class="footer-list">
                     <ul class="contact-details">
                         <li><i class="fas fa-phone-alt"></i> : 9355201834</li>
                         <li><i class="fas fa-envelope-square"></i> : priyankachandra1000@gmail.com</li>
                         <br>
                         <li>Follow us :
+          <!--         FOOTER SUBLIST (CONTACT US)      -->
                         <ul class="sublist">
                            <li><a href="https://www.facebook.com/LetsUpgrade.in/"><i class="fab fa-facebook fa-2x"></i></a></li>
                            <li><a href="https://www.youtube.com/channel/UCWUDiLzQZr4VDHNyMsVYn-g"><i class="fab fa-youtube fa-2x"></i></a></li>
@@ -87,44 +122,12 @@
 
                     </ul>
                 </div>
-        </div>
-        <!--        Quicklinks   -->
-        <div class="footer-section links">
-           <br>
-            <br>
-            <h3>QUICKLINKS</h3>
-               <div class="footer-list">
-                   <ul class=" quicklink">
-                       <li><a href ="">Categories</a></li>
-                       <li><a href="">Recent Blogs</a></li>
-                       <li><a href ="">Trending Blogs</a></li>
-                       <li><a href="">Home Page</a></li>
-                       <li><a href="">Profile Page</a></li>
-                       <li><a href="">Profile Setting</a></li>
-                       <li><a href="">About us</a></li>
-                       <li><a href="">Terms & Conditions</a></li>
-
-                   </ul>
-               </div>
-        </div>
-        <div class="footer-section contact-form">
-               <br>
-               <br>
-              <h3>CONTACT US</h3>
 
 
-               <div class="contact-section">
-                   <form class="contact-form" action="index.html " method="post" >
-                       <input type ="text" class="contact-form-text" placeholder="Your name">
-                       <input type ="text" class="contact-form-text" placeholder="Your email">
-                       <textarea class="contact-form-text" placeholder="Massage..."></textarea>
-                       <input type="submit" class="contact-form-btn" value="send">
-                   </form>
-               </div>
         </div>
 </div>
 
-
+<!--       FOOOTER BOTTOM     -->
         <div class ="footer-bottom">
         &copy; BLOGGERS ADDA | Designed by BWLU TEAM
         </div>
