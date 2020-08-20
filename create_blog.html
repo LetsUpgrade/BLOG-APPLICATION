@@ -26,31 +26,43 @@
 </head>
 <body>
 <div class="container mt-4">
-    <div class="card" style=" padding-top: 15px"> 
-        <h3 style="text-align: center;">Create A Blog</h3>
+    <div class="card mx-auto" style=" padding-top: 15px; width: 90%; max-width: 695px; "> 
+        <h3 style="text-align: center; font-weight: bold;">Create A Blog</h3>
     <div class="control-group m-4" >
         <form>
 
-            <div class="control-group">
+            <div class="control-group mx-4">
                 <div class="form-group floating-label-form-group controls">
                     
-                    <label>Title</label>
+                    <label style="font-weight: bold;">Author</label>
+                    <input type="text" class="form-control" placeholder="Author" id="author" aria-invalid="false" style="border:1.5px solid black">
+                </div>
+            </div>
+            
+            <div class="control-group mx-4">
+                <div class="form-group floating-label-form-group controls">
+                    
+                    <label style="font-weight: bold;">Title</label>
                     <input type="text" class="form-control" placeholder="Title" id="title" aria-invalid="false" style="border:1.5px solid black">
                 </div>
             </div>
             
-            <div class="form-group">
-                <label for="content">Content</label>
+            <div class="form-group mx-4">
+                <label for="content" style="font-weight: bold;">Content</label>
                 <textarea class="form-control" id="content" rows="13" style="resize: none; border: 1.5px solid black "></textarea>
             </div>
-            <div class="custom-file col-md-2 float-left">
+
+        <div class="row mx-4">
+            <div class="custom-file col-md-4 float-left">
                 <input type="file" class="custom-file-input" id="img_file" >
                 <label class="custom-file-label" for="img_file">Choose file</label>
             </div>
-            
-            <div class="form-group col-md-auto float-right">
+            <div class="custom-file col-md-5 float-left"></div>
+
+            <div class="form-group col-md-3 float-right" style="text-align: center;">
                 <button type="submit" class="btn btn-outline-info" >Create Blog</button>
             </div>
+        </div>
         </form>
     </div>
 </div> 
