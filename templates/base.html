@@ -20,6 +20,28 @@
                   });
           });
               </script>
+
+
+<!-- Stylesheet for create blog page -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<title>Create a blog</title>
+<style>  
+.card{ 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+}
+
+.custom-file-label::after{
+    background-color:rgb(18, 224, 224);
+    color:black
+}
+
+.custom-file-label{
+    color:black
+}
+</style>
+<!-- Style for create blog ends here -->
+
 </head>
 <body>
   <!-----navigation bar------->
@@ -40,9 +62,9 @@
                 <ul>
 
                    <li> <a href="">HOME</a> </li>
-                   <li> <a href="">CREATE BLOG</a> </li>
-                   <li> <a href="">LOGIN</a> </li>
-                   <li> <a href="">SIGN-UP</a> </li>
+                   <li> <a href="/create">CREATE BLOG</a> </li>
+                   <li> <a href="/login">LOGIN</a> </li>
+                   <li> <a href="/signup">SIGN-UP</a> </li>
                     <li ><a href="" class="PROFILE SETTING" >PROFILE SETTING</a> </li>
                     <li> <a href=""class="LOGOUT" >LOGOUT</a> </li>
                     <li>
@@ -56,11 +78,7 @@
             </div>
     </div>
 
-
-
-  <div class="main">
-
-  </div>
+{% block body %} {% endblock %}
 
   <!------footer--->
   <div class="footer">

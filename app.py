@@ -2,9 +2,7 @@ from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
-@app.route("/header")
-def head():
-    return render_template("header&footer.html")
+
 
 @app.route("/login")
 def login():
@@ -14,7 +12,7 @@ def login():
 def signup():
     return render_template("signup.html")
 
-@app.route("/create")
+@app.route("/")
 def create():
     return render_template("create_blog.html")
 
