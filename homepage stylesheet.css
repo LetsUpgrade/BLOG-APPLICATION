@@ -143,7 +143,7 @@ border-radius:5px;
 
 }
 .header-list ul li ul li a:hover{
-background:transparent;
+background:#2B2F92;
 
 transition:0.5s;
 box-shadow: 0 0 5px #66ffff;
@@ -522,7 +522,7 @@ border-radius:5px;
       .search-btn{
          margin-top:-9%;
          padding:5;
-         margin-left:65%;
+         margin-left:75%;
          background-color:;
 
 
@@ -530,7 +530,7 @@ border-radius:5px;
       /*   SEARCH INPUT   */
       .search-box input{
          width:50%;
-         margin-left:15%;
+         margin-left:25%;
          padding:5px;
       }
 
