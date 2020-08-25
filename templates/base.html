@@ -42,6 +42,51 @@
 </style>
 <!-- Style for create blog ends here -->
 
+<!-- Stylesheet for the home page -->
+
+
+<!-----------------------------------------CSS-------------------------------------->
+<link rel="stylesheet" href="{{  url_for('static', filename='css/homestyle/bootstrap.css')  }}">
+<link rel="stylesheet" href="{{  url_for('static', filename='vendors/owl-carousel/owl.carousel.min.css')  }}">
+<link rel="stylesheet" type="text/css" href="{{  url_for('static', filename='css/homestyle/main.css')  }}">
+
+<!-----------------------------------Google Fonts----------------------------------->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<!------------------------------------Font Awesome------------------------------------->
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- Stylesheet for the home page ends here -->
+
+
+<!-- Stylesheet for innerblog -->
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{{  url_for('static', filename='css/homestyle/bootstrap.css')  }}">
+        
+<!----Linear Icons----->
+<link rel="stylesheet" href="{{  url_for('static', filename='css/vendors/linericon/style.css')  }}">
+<!--<link rel="stylesheet" type="text/css" href="inner_blog.css">-->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homestyle/inner_blog.css')  }}">
+
+
+<!------------------------------------Font Awesome------------------------------------->
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Stylesheet for innerblog ends here -->
+
+<!-- Stylesheet for settings 
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/custom.css')  }}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ Stylesheet for settings ends here  -->
+
+
 </head>
 <body>
   <!-----navigation bar------->
@@ -61,11 +106,11 @@
             <div class="header-list" id="header_list">
                 <ul>
 
-                   <li> <a href="">HOME</a> </li>
+                   <li> <a href="/">HOME</a> </li>
                    <li> <a href="/create">CREATE BLOG</a> </li>
                    <li> <a href="/login">LOGIN</a> </li>
                    <li> <a href="/signup">SIGN-UP</a> </li>
-                    <li ><a href="" class="PROFILE SETTING" >PROFILE SETTING</a> </li>
+                    <li ><a href="/setting" class="PROFILE SETTING" >PROFILE SETTING</a> </li>
                     <li> <a href=""class="LOGOUT" >LOGOUT</a> </li>
                     <li>
                       <a href="">
@@ -116,7 +161,7 @@
                        <li><a href ="">Categories</a></li>
                        <li><a href="">Recent Blogs</a></li>
                        <li><a href ="">Trending Blogs</a></li>
-                       <li><a href="">Home Page</a></li>
+                       <li><a href="/">Home Page</a></li>
                        <li><a href="">Profile Page</a></li>
                        <li><a href="">Profile Setting</a></li>
                        <li><a href="">About us</a></li>

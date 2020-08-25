@@ -1,0 +1,367 @@
+{% extends "base.html" %}
+
+{% block body %}
+   <!-- <body> -->
+      <!-----------------------------------------Slider Carousel-------------------------------->
+      <section class="post_slider_area">
+         <div class="post_slider_inner owl-carousel">
+            <div class="item">
+               <div class="post_s_item">
+                  <div class="post_img">
+                     <img src="{{  url_for('static', filename='img/blogimg/post-slider/post-cat-1.jpg')  }}" alt="">
+                  </div>
+                  <div class="post_text">
+                     <a href="/blog">
+                        <h4>Listicles--articles based on a list of items or ideas to draw from</h4>
+                     </a>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                     <div class="date">
+                        <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> March 02, 2020</a>
+                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 50</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="post_s_item">
+                  <div class="post_img">
+                     <img src="{{  url_for('static', filename='img/blogimg/post-slider/post-cat-2.jpg')  }}" alt="">
+                  </div>
+                  <div class="post_text">
+                     <a href="/blog">
+                        <h4>Listicles--articles based on a list of items or ideas to draw from</h4>
+                     </a>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                     <div class="date">
+                        <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> March 02, 2020</a>
+                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 50</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="post_s_item">
+                  <div class="post_img">
+                     <img src="{{  url_for('static', filename='img/blogimg/post-slider/post-s-2.jpg')  }}" alt=""> 
+                  </div>
+                  <div class="post_text">
+                     <a href="/blog">
+                        <h4>Listicles--articles based on a list of items or ideas to draw from</h4>
+                     </a>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                     <div class="date">
+                        <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> March 02, 2020</a>
+                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 48</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="post_s_item">
+                  <div class="post_img">
+                     <img src="{{  url_for('static', filename='img/blogimg/post-slider/post-s-3.jpg')  }}" alt="">
+                  </div>
+                  <div class="post_text">
+                     <a href="/blog">
+                        <h4>Listicles--articles based on a list of items or ideas to draw from</h4>
+                     </a>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                     <div class="date">
+                        <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> March 02, 2020</a>
+                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 48</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="post_s_item">
+                  <div class="post_img">
+                     <img src="{{  url_for('static', filename='img/blogimg/post-slider/post-s-4.jpg')  }}" alt="">
+                  </div>
+                  <div class="post_text">
+                     <a href="/blog">
+                        <h4>Listicles--articles based on a list of items or ideas to draw from</h4>
+                     </a>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                     <div class="date">
+                        <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> March 02, 2020</a>
+                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 46</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="post_s_item">
+                  <div class="post_img">
+                     <img src="{{  url_for('static', filename='img/blogimg/post-slider/post-s-1.jpg')  }}" alt="">
+                  </div>
+                  <div class="post_text">
+                     <a href="/blog">
+                        <h4>Listicles--articles based on a list of items or ideas to draw from</h4>
+                     </a>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                     <div class="date">
+                        <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> March 02, 2020</a>
+                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 46</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!---------------------------------Articles------------------------------------>
+
+      <div class="container marketing">
+      <div class="row">
+      <section id="blog-landing" class="col-lg-12">
+
+      <article class="white-panel wow slideInLeft">
+         <img src="{{ url_for('static', filename='img/homeimages/001.jpg')  }}" alt="ALT">
+         <h1><a href="/blog">Stand up from the crowd</a></h1>
+         <div class="date">
+            <span class="day">12</span>
+            <span class="month">Aug</span>
+            <span class="year">2020</span>
+         </div>
+         <br />
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem.</p>
+         <a href="/blog" class="button">Read more..</a>
+         <div>
+            <div class="menu-content">
+               <span><a href="#" class="fa fa-heart-o"><span> 18</span></a></span>
+               <span><a href="#" class="fa fa-comment-o"><span>  3</span></a></span>
+            </div>
+            <br />
+         </div>
+         <br />
+      </article>
+
+      <article class="white-panel wow slideInDown">
+         <img src="{{ url_for('static', filename='img/homeimages/022.jpg')  }}" alt="ALT">
+         <h1><a href="/blog">Stand up from the crowd</a></h1>
+         <div class="date">
+            <span class="day">12</span>
+            <span class="month">Aug</span>
+            <span class="year">2020</span>
+         </div>
+         <br />
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, </p>
+         <a href="/blog" class="button">Read more..</a>
+         <div>
+            <div class="menu-content">
+               <span><a href="#" class="fa fa-heart-o"><span> 18</span></a></span>
+               <span><a href="#" class="fa fa-comment-o"><span> 3</span></a></span>
+            </div>
+            <br />
+         </div>
+         <br />
+      </article>
+
+      <article class="white-panel wow slideInRight">
+         <img src="{{ url_for('static', filename='img/homeimages/002.jpg')  }}" alt="ALT">
+         <h1><a href="/blog">Stand up from the crowd</a></h1>
+         <div class="date">
+            <span class="day">12</span>
+            <span class="month">Aug</span>
+            <span class="year">2020</span>
+         </div>
+         <br />
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. Nulla</p>
+         <a href="/blog" class="button">Read more..</a>
+         <div>
+            <div class="menu-content">
+               <span><a href="#" class="fa fa-heart-o"><span> 18</span></a></span>
+               <span><a href="#" class="fa fa-comment-o"><span> 3</span></a></span>
+            </div>
+            <br />
+         </div>
+         <br />
+      </article>
+
+      <article class="white-panel wow bounceInLeft" id="quote">
+         <p>"Lorem ipsum dolor sit amet, consevamus ullamcorper aliquam purus, et euismod justo. Nulla the vector graphic."<br>~ Lorem Ipsum</p>
+      </article>
+      <article class="white-panel wow slideInLeft">
+         <img src="{{ url_for('static', filename='img/homeimages/003.jpg')  }}" alt="ALT">
+         <h1><a href="/blog">Stand up from the crowd</a></h1>
+         <div class="date">
+            <span class="day">12</span>
+            <span class="month">Aug</span>
+            <span class="year">2020</span>
+         </div>
+         <br />
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. Nulla</p>
+         <a href="/blog" class="button">Read more..</a>
+         <div>
+            <div class="menu-content">
+               <span><a href="#" class="fa fa-heart-o"><span> 18</span></a></span>
+               <span><a href="#" class="fa fa-comment-o"><span> 3</span></a></span>
+            </div>
+            <br />
+         </div>
+         <br />
+      </article>
+
+      <article class="white-panel wow slideInLeft">
+         <img src="{{ url_for('static', filename='img/homeimages/004.jpg')  }}" alt="ALT">
+         <h1><a href="/blog">Stand up from the crowd</a></h1>
+         <div class="date">
+            <span class="day">12</span>
+            <span class="month">Aug</span>
+            <span class="year">2020</span>
+         </div>
+         <br />
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem</p>
+         <a href="/blog" class="button">Read more..</a>
+         <div>
+            <div class="menu-content">
+               <span><a href="#" class="fa fa-heart-o"><span> 18</span></a></span>
+               <span><a href="#" class="fa fa-comment-o"><span> 3</span></a></span>
+            </div>
+            <br />
+         </div>
+         <br />
+      </article>
+
+      <article class="white-panel wow slideInLeft">
+         <img src="{{ url_for('static', filename='img/homeimages/006.jpg')  }}" alt="ALT">
+         <h1><a href="/blog">Stand up from the crowd</a></h1>
+         <div class="date">
+            <span class="day">12</span>
+            <span class="month">Aug</span>
+            <span class="year">2020</span>
+         </div>
+         <br />
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis.</p>
+         <a href="/blog" class="button">Read more..</a>
+         <div>
+            <div class="menu-content">
+               <span><a href="#" class="fa fa-heart-o"><span> 18</span></a></span>
+               <span><a href="#" class="fa fa-comment-o"><span> 3</span></a></span>
+            </div>
+            <br />
+         </div>
+         <br />
+      </article>
+
+      <article class="white-panel wow slideInDown">
+         <img src="{{ url_for('static', filename='img/homeimages/007.jpg')  }}" alt="ALT">
+         <h1><a href="/blog">Stand up from the crowd</a></h1>
+         <div class="date">
+            <span class="day">12</span>
+            <span class="month">Aug</span>
+            <span class="year">2020</span>
+         </div>
+         <br />
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. Nulla</p>
+         <a href="/blog" class="button">Read more..</a>
+         <div>
+            <div class="menu-content">
+               <span><a href="#" class="fa fa-heart-o"><span> 18</span></a></span>
+               <span><a href="#" class="fa fa-comment-o"><span> 3</span></a></span>
+            </div>
+            <br />
+         </div>
+         <br />
+      </article>
+
+      <article class="white-panel wow bounceInLeft" id="quote">
+         <p>"Lorem ipsum dolor sit amet, consevamus ullamcorper aliquam purus, et euismod justo. Nulla the vector graphic."<br>~ Lorem Ipsum</p>
+      </article>
+
+      <article class="white-panel wow slideInLeft">
+         <img src="{{ url_for('static', filename='img/homeimages/008.jpg')  }}" alt="ALT">
+         <h1><a href="/blog">Stand up from the crowd</a></h1>
+         <div class="date">
+            <span class="day">12</span>
+            <span class="month">Aug</span>
+            <span class="year">2020</span>
+         </div>
+         <br />
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. Nulla</p>
+         <a href="/blog" class="button">Read more..</a>
+         <div>
+            <div class="menu-content">
+               <span><a href="#" class="fa fa-heart-o"><span> 18</span></a></span>
+               <span><a href="#" class="fa fa-comment-o"><span> 3</span></a></span>
+            </div>
+            <br />
+         </div>
+         <br />
+      </article>
+
+      <article class="white-panel wow bounceInLeft">
+         <img src="{{ url_for('static', filename='img/homeimages/009.jpg')  }}" alt="ALT">
+         <h1><a href="/blog">Stand up from the crowd</a></h1>
+         <div class="date">
+            <span class="day">12</span>
+            <span class="month">Aug</span>
+            <span class="year">2020</span>
+         </div>
+         <br />
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non </p>
+         <a href="/blog" class="button">Read more..</a>
+         <div>
+            <div class="menu-content">
+               <span><a href="#" class="fa fa-heart-o"><span> 18</span></a></span>
+               <span><a href="#" class="fa fa-comment-o"><span> 3</span></a></span>
+            </div>
+            <br />
+         </div>
+         <br />
+      </article>
+
+      <article class="white-panel wow slideInUp">
+         <img src="{{ url_for('static', filename='img/homeimages/010.jpg')  }}" alt="ALT">
+         <h1><a href="/blog">Stand up from the crowd</a></h1>
+         <div class="date">
+            <span class="day">12</span>
+            <span class="month">Aug</span>
+            <span class="year">2020</span>
+         </div>
+         <br />
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. Nulla</p>
+         <a href="/blog" class="button">Read more..</a>
+         <div>
+            <div class="menu-content">
+               <span><a href="#" class="fa fa-heart-o"><span> 18</span></a></span>
+               <span><a href="#" class="fa fa-comment-o"><span> 3</span></a></span>
+            </div>
+            <br />
+         </div>
+         <br />
+      </article>
+
+
+
+      <!-----------------Including JS Files-------------------------->
+
+      <script src="{{  url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+      <script src="{{  url_for('static', filename='js/popper.js') }}"></script>
+      <script src="{{  url_for('static', filename='js/bootstrap.min.js')  }}"></script>
+      <script src="{{  url_for('static', filename='js/pinterest_grid.js')  }}"></script> 
+      <script src="..//wow.min.js"></script>
+      <script>
+         $(document).ready(function() {
+         
+             $('#blog-landing').pinterest_grid({
+                 no_columns: 4,
+                 padding_x: 10,
+                 padding_y: 10,
+                 margin_bottom: 50,
+                 single_column_breakpoint: 700
+             });
+         
+         });
+         $(function () {
+         
+         // animate on scroll
+         new WOW().init();
+         });
+      </script>
+      <script src="{{  url_for('static', filename='js/stellar.js')  }}"></script>
+      <script src="{{  url_for('static', filename='vendors/owl-carousel/owl.carousel.min.js')  }}"></script>
+      <script src="{{  url_for('static', filename='js/theme.js') }}"></script>
+   <!-- </body> -->
+   {% endblock %}
