@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sign</title>
+<meta charset="utf-8">
+<meta name= "viewport" content= "initial-scale=1, maximum-scale=1, user-scalable= no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='signupstyle.css') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+	
+	<div class="container col-12">
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				{% for category, message in messages %}
+					<div class="alert alert-{{ category }}">
+						{{ message }}
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+		{% block content %} 
+
+		<div class="container">
+    <div class="form">
+      <div class="sign-in-section">
+        <h1>Sign Up</h1>
+        <ul>
+          <li><i class="fab fa-facebook-f"></i></li>
+          <li><i class="fab fa-linkedin-in"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+        </ul>
+        <p>or use your email</p>
+        <form>
+          <div class="form-field">
+            <label for="username">Username</label>
+            <input type="text" placeholder="Username" class="text" name="name"/>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Email" name="email" />
+          </div>
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password" name="pass" />
+            <label for="confirm password">Confirm Password</label>
+            <input id="password" type="password" placeholder="Confirm Password" name="confirmpass" />
+          </div>
+         
+          <div class="form-field">
+            <input type="Create account" class="btn btn-signin" value="Create account" />
+          </div>
+        </form>
+        <div class="links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+		{% endblock %}
+	</div>
+
