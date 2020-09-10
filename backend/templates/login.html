@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name= "viewport" content= "initial-scale=1, maximum-scale=1, user-scalable= no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>LOGIN</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+    	<div class="container col-12">
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				{% for category, message in messages %}
+					<div class="alert alert-{{ category }}">
+						{{ message }}
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+		{% block content %} 
+
+		<div class= "login-form">
+            <form class= "" method= "post">
+                <h1>LOGIN</h1>
+                <input type ="username or email"  placeholder="Email or Username" class="txtb" name="email">
+                <input type ="password"  placeholder="Password" class="txtb" name="pass">
+                <p><a href= "#">password?</a></p>
+                <input type="submit" value="Login" class="login-btn">
+                <a href= "http://127.0.0.1:5000/signup">New User? </a>
+            </form>
+        </div>
+
+		{% endblock %}
+	</div>
+
+</body>
+</html>
