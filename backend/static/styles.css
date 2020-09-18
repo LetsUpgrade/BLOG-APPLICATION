@@ -1,27 +1,26 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(202, 228, 238);
     background-size: cover;
 }
 .login-form{
     width: 300px;
     padding: 20px;
     text-align: center;
-    background-color:#516a83;
+    background-color:whitesmoke;
     background-size: cover ;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow:hidden;
+    box-shadow: 0 5px 15px #193047;
 }
 .login-form h1{
     margin-top: 100px;
     font-family: 'Fondamento', cursive;
     color: rgb(8, 8, 8);
-    font-size: 30px;
-    padding-bottom: 50px;
+    font-size: 40px;
 }
 .login-form input{
     display: block;
@@ -39,6 +38,7 @@ body{
     background: rgba(255,255,255,.5);
     border-radius: 6px;
     background-color:white;
+    box-shadow: 0 5px 15px #517599;
     font-weight: bold;
 }
 .login-btn{
@@ -49,11 +49,12 @@ body{
     border-radius: 44px;
     cursor: pointer;
     transition: 0.8s;
+    box-shadow: 0 5px 15px #517599;
     position: relative;
     border: none;
     font-size: 20px;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     width: 200px;
     text-align: center;
     -webkit-transition-duration: 0.4s; 
@@ -79,5 +80,4 @@ body{
 }
 p{
     font-size: larger;
-    padding-top: 15px;
 }

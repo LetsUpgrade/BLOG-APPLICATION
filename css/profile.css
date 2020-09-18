@@ -1,0 +1,321 @@
+body {
+	margin-top: 80px;
+	margin-left: 10px;
+	margin-bottom: 90px;
+	background-image: url();
+}
+
+html {
+	font-size: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	margin: 0px;
+	padding: 0px;
+	touch-action: manipulation;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Poppins', serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	word-wrap: break-word;
+	color: #333;
+}
+
+h2,
+h3,
+h4,
+h5 {
+	line-height: 1.5;
+	font-weight: inherit;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Poppins', cursive;
+}
+
+h1 {
+	font-size: 4em;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 2.2em;
+	line-height: 1.1;
+}
+
+h3 {
+	font-size: 1.8em;
+}
+
+h4 {
+	font-size: 1.3em;
+}
+
+h5 {
+	font-size: 1em;
+}
+
+h6 {
+	font-size: .9em;
+	letter-spacing: 1px;
+}
+
+a,
+button {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	line-height: 1;
+	-webkit-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+
+a:focus,
+a:active,
+a:hover,
+button:focus,
+button:active,
+button:hover,
+a b.light-color:hover {
+	text-decoration: none;
+	color: #FFA804;
+}
+
+img {
+	width: 100%;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+span {
+	display: inline-block;
+}
+
+button {
+	outline: 0;
+	border: 0;
+	background: none;
+	cursor: pointer;
+}
+
+.margin-tb-30 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.font-blue {
+	color: blue;
+}
+
+.font-lite-black {
+	color: #999;
+}
+
+/*------------PROFILE-SECTION----------*/
+
+.intro-section {
+	padding-top: 200px;
+	position: relative;
+	background-size: cover;
+	z-index: 1;
+	background-image: url(../../img/slider-1-1920x1080.jpg);
+}
+
+.intro-section:before {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, .2);
+}
+
+.intro-section:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 150px;
+	z-index: -1;
+	background: #fff;
+}
+
+.intro {
+	padding: 0 20px;
+	margin-top: 100px;
+	text-align: center;
+	background: #fff;
+}
+
+.intro .profile-img {
+	height: 200px;
+	width: 200px;
+	border-radius: 100px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	top: -100px;
+	margin-bottom: -70px;
+}
+
+.intro .information>li {
+	display: block;
+	margin: 5px 0;
+}
+
+.intro .social-icons>li>a {
+	height: 35px;
+	line-height: 35px;
+	width: 35px;
+	border-radius: 20px;
+	overflow: hidden;
+	z-index: 1;
+	position: relative;
+	margin: 0 5px 5px;
+	background: #887392;
+	color: #fff;
+}
+
+.intro .social-icons>li>a:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: -1;
+	border-radius: 20px;
+	background: blue;
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+
+.intro .social-icons>li>a:hover:after {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+
+/*----------------------STATS----------------*/
+
+.information {
+	text-align: center;
+	position: relative;
+	right: 4%;
+}
+
+.stats {
+	margin: auto;
+	border-top: 1px solid #ced5e0;
+	width: 940px;
+}
+
+.stats .followers,
+.stats .following,
+.stats .stories {
+	display: inline-block;
+	padding: 6px 15px 0 15px;
+}
+
+.stats .followers,
+.stats .following {
+	border-right: 1px solid #ced5e0;
+}
+
+.stats .value {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.stats .label {
+	display: block;
+	font-size: 25px;
+	color: #8c98a8;
+}
+
+@media screen and (min-width: 480px) {
+	.stats {
+		margin: auto;
+		border-top: 1px solid #ced5e0;
+		width: 410px;
+	}
+}
+
+.profile-btn {
+	display: flex;
+	margin-top: 50px;
+	width: 55%;
+	margin-left: 24%;
+}
+
+@media screen and (min-width: 480px) {
+	.profile-btn {
+		display: flex;
+		margin-top: 50px;
+		width: 75%;
+		margin-left: 12%;
+	}
+}
+
+button.messagebtn,
+button.followbtn {
+	border: 0;
+	padding: 15px;
+	width: 100%;
+	border-radius: 3px;
+	background: blue;
+	color: #fff;
+	font-family: "Bree Serif";
+	font-size: 1rem;
+	margin: 5px 2px;
+	cursor: pointer;
+	outline: none;
+	margin-bottom: 10px;
+	transition: background 0.3s ease-in-out;
+	box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+button.messagebtn:hover,
+button.followbtn:hover {
+	background: rgba(70, 0, 288, 0.9);
+}
+
+button.messagebtn i,
+button.followbtn i {
+	margin-right: 5px;
+}
+
+.card-img-top {
+	width: 100%;
+	cursor: pointer;
+}
+
+p {
+	color: black;
+	margin: 0px;
+	font-style: oblique;
+}
+
+.card-body {
+	font: oblique;
+}
+
+.profile-section {
+	margin-left: 15%;
+}
