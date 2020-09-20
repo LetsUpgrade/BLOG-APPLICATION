@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Home_Page</title>
+      <!------------------------------------Meta Tags------------------------------------->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-----------------------------------------CSS-------------------------------------->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='vendors/owl-carousel/owl.carousel.min.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+
+      <!-----------------------------------Google Fonts----------------------------------->
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+      <!------------------------------------Font Awesome------------------------------------->
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+   </head>
+   <body>
+      <!-----------------------------------------Slider Carousel-------------------------------->
+      {% for post in posts %}
+      <section class="post_slider_area">
+         <div class="post_slider_inner owl-carousel">
+            <div class="item">
+               <div class="post_s_item">
+                  <div class="post_img">
+                     <img src="{{ url_for('static', filename='img/post-slider/post-cat-1.jpg') }}" alt="">
+                  </div>
+                  <div class="post_text">
+                     <a href="{{ url_for('inner_blog')}}">
+                        <h4>{{ post.title }}</h4>
+                     </a>
+                     <p>{{ post.subtitle }}</p>
+                     <div class="date">
+                        <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date.strftime('%B %d, %Y ') }}</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+      </section>
+      {% endfor %}
+
+      <!---------------------------------Articles------------------------------------>
+
+      <div class="container marketing">
+      <div class="row">
+      <section id="blog-landing" class="col-lg-12">
+         {% for post in posts %}
+      <article class="white-panel wow slideInLeft">
+         <img src="{{ url_for('static', filename='post.image_file') }}" alt="ALT">
+         <h1><a href="{{ url_for('post', post_id = post.id)}}">({ post.title })</a></h1>
+         <div class="date">
+            <span class="day">{{ post.date.strftime('%d') }}</span>
+            <span class="month">{{ post.date.strftime('%B') }}</span>
+            <span class="year">{{ post.date.strftime('%Y') }}</span>
+         </div>
+         <br />
+         <p>{{ post.content }}</p>
+         <a href="{{ url_for('post', post_id = post.id)}}" class="button">Read more..</a>
+         
+      </article>
+         {% endfor %}
+
+
+
+      <!-----------------Including JS Files-------------------------->
+
+      <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/popper.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/pinterest_grid.js') }}"></script> 
+      <script src="{{ url_for('static', filename='..//wow.min.js') }}"></script>
+      <script>
+         $(document).ready(function() {
+         
+             $('#blog-landing').pinterest_grid({
+                 no_columns: 4,
+                 padding_x: 10,
+                 padding_y: 10,
+                 margin_bottom: 50,
+                 single_column_breakpoint: 700
+             });
+         
+         });
+         $(function () {
+         
+         // animate on scroll
+         new WOW().init();
+         });
+      </script>
+      <script src="{{ url_for('static', filename='js/stellar.js') }}"></script>
+      <script src="{{ url_for('static', filename='vendors/owl-carousel/owl.carousel.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+   </body>
+</html>

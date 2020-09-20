@@ -22,7 +22,7 @@ body{
     color: rgb(8, 8, 8);
     font-size: 40px;
 }
-.login-form input{
+.login-form div{
     display: block;
     width: 100%;
     padding: o 16px;

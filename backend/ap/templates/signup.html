@@ -1,0 +1,91 @@
+{% extends "signup_layout.html" %}
+{% block content %}
+	
+    <div class="container">
+    <div class="form">
+      <div class="sign-in-section">
+        <h1>Sign Up</h1>
+        <ul>
+          <li><i class="fab fa-facebook-f"></i></li>
+          <li><i class="fab fa-linkedin-in"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+        </ul>
+        <p>or use your email</p>
+                    <form method="POST">
+                    	{{ form.hidden_tag() }}
+                    	<fieldset class="form-group">
+                        <div class="form-field">
+                            {{ form.username.label( class="form-control-label" ) }}
+
+                            {% if form.username.errors %}
+                                {{ form.username( class="form-control form-control-lg is-invalid" ) }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.username.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                            {% else %}  
+                                {{ form.username( class="form-control form-control-lg" ) }}
+                            {% endif %}
+                        </div>
+                        <div class="form-field">
+                        	{{ form.email.label( class="form-control-label" ) }}
+
+                        	{% if form.email.errors %}
+                                {{ form.email( class="form-control form-control-lg is-invalid" ) }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.email.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                            {% else %}  
+                                {{ form.email( class="form-control form-control-lg" ) }}
+                            {% endif %}
+                        </div>
+                        <div class="form-field">
+                        	{{ form.password.label( class="form-control-label" ) }}
+
+                        	{% if form.password.errors %}
+                                {{ form.password( class="form-control form-control-lg is-invalid" ) }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                            {% else %}  
+                                {{ form.password( class="form-control form-control-lg" ) }}
+                            {% endif %}
+                        </div>
+                        <div class="form-field">
+                        	{{ form.confirm_password.label( class="form-control-label" ) }}
+
+                        	{% if form.confirm_password.errors %}
+                                {{ form.confirm_password( class="form-control form-control-lg is-invalid" ) }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.confirm_password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                            {% else %}  
+                                {{ form.confirm_password( class="form-control form-control-lg" ) }}
+                            {% endif %}
+                        </div>
+                    </fieldset>
+                        <div class="form-field p-t-10">
+                        	{{ form.submit( class="btn btn-outline-info")}}
+                        </div>
+                    </form>
+                    <div class="links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="border-top pt-3">
+		<small class="text-muted">
+			<bold>Already have an account?</bold> <a href="{{ url_for('login')}}" class="ml-2"></a>
+		</small>
+	</div>
+{% endblock content %}
