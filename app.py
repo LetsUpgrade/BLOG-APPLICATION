@@ -39,9 +39,10 @@ def create():
 def setting():
     return render_template("Setting.html")
 
-@app.route("/profile")
-def profile():
-    return render_template("profile.html")
+@app.route("/profile/<string:id>")
+def profilefn(id):
+    prof = profile.query.filter_by(id=id).first()
+    return render_template("profile.html", prof=prof)
 
 
 app.run(debug=True)
