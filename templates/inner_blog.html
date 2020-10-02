@@ -2,7 +2,7 @@
 {% block body %}
     <body>
         <!------------------------------------Home Banner Area------------------------------------>
-
+        {% set img=blog.image %}
         <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
@@ -24,35 +24,31 @@
                 <div class="row">
                     <div class="col-lg-8">
        					<div class="main_blog_details">
-       						<img class="img-fluid" src="../images/b1.jpg" alt="">
-       						<a href="#"><h4>Stand up from the crowd</h4></a>
+                            
+                            {% set dp=prof.dp %}
+       						<img class="img-fluid" src="{{ img }}" alt="">
+       						<a href="#"><h4>{{ blog.title }}</h4></a>
        						<div class="user_details">
        							<div class="float-left">
-       								<a href="#">Lifestyle</a>
-       								<a href="#">Travel</a>
+       								<!-- <a href="#">Lifestyle &nbsp;</a>
+       								<a href="#">Travel &nbsp;</a><br> -->
        							</div>
        							<div class="float-right">
        								<div class="media">
        									<div class="media-body">
-       										<h5>Lorem Ipsum</h5>
-       										<p>02 Feb, 2020 11:21 am</p>
+       										
        									</div>
        									<div class="d-flex">
-       										<img src="{{  url_for('static', filename='img/blogimg/blog/user-img.jpg')  }}" alt="">
+       										<!-- <img src="{{  url_for('static', filename='img/blogimg/blog/user-img.jpg')  }}" alt=""> -->
        									</div>
        								</div>
        							</div>
-       						</div>
-       						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. Nulla</p>
-       						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. NullaLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. Nulla</p>
-							<blockquote class="blockquote">
-								<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. Nulla</p>
-							</blockquote>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. Nulla</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula enim, auctor eget rutrum a, convallis non diam. Vivamus ullamcorper aliquam purus, et euismod justo. Nulla</p>
+                               </div>
+                            <div>   
+                                <p>{{ blog.content }}</p><br><br><br><p>{{ date_posted }}</p><br><br>
       						<div class="news_d_footer">
-      							<a href="#"><i class="lnr lnr lnr-heart"></i>Lorem and 9 people like this</a>
-      							<a class="justify-content-center ml-auto" href="#"><i class="lnr lnr lnr-bubble"></i>09 Comments</a>
+      							<a href="#"><i class="lnr lnr lnr-heart"></i>&nbsp; Lorem and 9 people like this</a>
+      							<a class="justify-content-center ml-auto" href="#"><i class="lnr lnr lnr-bubble"></i>&nbsp; 09 Comments</a><br><br>
       							<div class="news_socail ml-auto">
 									<a href="#"><i class="fa fa-facebook"></i></a>
 									<a href="#"><i class="fa fa-twitter"></i></a>
@@ -62,9 +58,9 @@
 								</div>
       						</div>
        					</div>
-       					
+       					</div>
                         <!--------------------------------------------------Comment Form-------------------------->	                                             				
-                        
+                        <br><br>
                         <div class="comment-form">
                             <h4>Leave a Reply</h4>
                             <form>
@@ -102,7 +98,7 @@
                             <!--------------------------------------About Writer------------------------------->
 
                             <aside class="single_sidebar_widget author_widget">
-                                <img class="author_img rounded-circle" src="{{  url_for('static', filename='img/blogimg/blog/author.png')  }}" alt="">
+                                <img class="author_img rounded-circle" src="{{  url_for('static', filename=dp)  }}" alt="">
                                 <h4>Lorem Ipsum</h4>
                                 <p>Blog Writer</p>
                                 <div class="social_icon">
@@ -111,7 +107,7 @@
                                     <a href="#"><i class="fa fa-github"></i></a>
                                     <a href="#"><i class="fa fa-behance"></i></a>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sollicitudin elit. Curabitur magna ligula, condimentum sed lacus nec, vulputate cursus sem. Sed a semper felis. Curabitur ligula </p>
+                               
                                 <div class="br"></div>
                             </aside>
 

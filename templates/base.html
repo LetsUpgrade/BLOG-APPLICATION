@@ -97,42 +97,40 @@
 
 <!-- Stylesheet for profile ends here -->
 
+<!-- Styles for the navigation -->
+<link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+
+
+<!-- Template Main CSS File -->
+<link href="{{ url_for('static', filename='css/stylenew.css') }}" rel="stylesheet">
+
+<!-- Style for nav bad ends -->
 </head>
 <body>
-  <!-----navigation bar------->
-	<div class="header">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+   <div class="container-fluid d-flex justify-content-between align-items-center">
 
-        <!--------header logo-------->
-        <div class="header-logo"> <i class="fas fa-pen-fancy"></i> BLOGGERS ADDA
-            <!--------------search bar--------->
-            <!-- <div class ="search-box">
-                <input type="text" placeholder="Search">
-                    <a class="search-btn" href=""><i class="fas fa-search fa-xs"></i></a>
-             </div>
-        
-        <span id="menu_btn" ><i class="fas fa-bars menu-btn id= "></i></span> -->
-        </div>
-        <!---------menu,header-list------------->
-            <div class="header-list" id="header_list">
-                <ul>
+     <h1 class="logo"><a href="/">Blogger's Adda</a></h1>
 
-                   <li> <a href="/">HOME</a> </li>
-                   <li> <a href="/create">CREATE BLOG</a> </li>
-                   <li> <a href="/login">LOGIN</a> </li>
-                   <li> <a href="/signup">SIGN-UP</a> </li>
-                    <li ><a href="/setting" class="PROFILE SETTING" >PROFILE SETTING</a> </li>
-                    <li> <a href=""class="LOGOUT" >LOGOUT</a> </li>
-                    <li>
-                      <a href="">
-                        <i class="fas fa-user fa-2x"></i>
+     <nav class="nav-menu d-none d-lg-block">
+       <ul>
+         <li class="active"><a href="/">HOME</a></li>
+         <li><a href="/profile/arjundave">PROFILE</a></li>
+         <li><a href="/create">CREATE</a></li>
+         <li><a href="/setting">SETTINGS</a></li>
+         <li><a href="/login">LOG IN</a></li>
+         <li><a href="/signup">SIGN UP</a></li>
+       </ul>
+     </nav><!-- .nav-menu -->
 
-                      </a>
-                    </li>
+ </header><!-- End Header -->
+<div class="row"></div>
 
-                  </ul>
-            </div>
-    </div>
-<br><br><br><br>
 {% block body %} 
 
    <!-- <body> -->
@@ -502,13 +500,13 @@
 {% endblock %}
 
   <!------footer--->
-  <div class="footer">
+<!--  <div class="footer">
         <div class="footer-section about ">
             <div class="footer-logo"> <i class="fas fa-pen-fancy"></i>BLOGGERS ADDA </div>
-            <!--------ABOUT SECTION------->
+            ------ABOUT SECTION-----
             <br>
             <br>
-           <h3>CONTACT DETAILS</h3>
+            <h3>CONTACT DETAILS</h3>
                 <div class="footer-list">
                     <ul class="contact-details">
                         <li><i class="fas fa-phone-alt"></i> : 9355201834</li>
@@ -526,9 +524,9 @@
 
                     </ul>
                 </div>
-        </div>
+        </div> -->
         <!--        Quicklinks   -->
-        <div class="footer-section links">
+        <!-- <div class="footer-section links">
            <br>
             <br>
             <h3>QUICKLINKS</h3>
@@ -561,12 +559,24 @@
                    </form>
                </div>
         </div>
-</div>
+</div> -->
 
+<script src="{{ url_for('static', filename='assets/vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/counterup/counterup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/venobox/venobox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
 
-        <div class ="footer-bottom">
-        &copy; BLOGGERS ADDA | Designed by BWLU TEAM
-        </div>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<!-- <div class ="footer-bottom">
+&copy; BLOGGERS ADDA | Designed by BWLU TEAM
+</div> -->
 
 </body>
 </html>

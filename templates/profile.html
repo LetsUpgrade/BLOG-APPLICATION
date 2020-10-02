@@ -2,18 +2,13 @@
 {% block body %}
 <!-------------------PROFILE SECTION--------------->
 <style>
-   .extra{
-      display: none;
-   }
    .card:hover {
   margin-top: -5px;
-  transition: all 0.3s ease-in-out;
-  box-shadow:  -12px 1px 140px -14px rgba(0,0,102,0.75);
+  transition: all 0.2s ease-in-out;
+  box-shadow:  -12px 1px 140px -14px rgba(117, 117, 199, 0.514);
   background-clip: padding-box;
    }
-   .card:hover .extra{
-      display:inline-block;
-   }
+  
 </style>
 <div class="container">
       <section class="intro-section">
@@ -22,7 +17,8 @@
                <div class="col-md-1 col-lg-2"></div>
                <div class="col-md-10 col-lg-8">
                   <div class="intro">
-                     <div class="profile-img"><img src="{{ url_for('static', filename='img/guy.jpg') }}" alt="img"></div>
+                     {% set dp=prof.dp %}
+                     <div class="profile-img"><img src="{{ url_for('static', filename = dp) }}" alt="img"></div>
                      <h2><b>{{prof.name}}</b></h2>
                      <h4 class="font-blue">Content Writer</h4>
                      <br />
@@ -48,14 +44,16 @@
                         </div>
                      </div>
                      <div class="row my-2">
-                        {% for i in range(1,6) %}
-                        <div class="col-md-4 mb-5 mx-auto" style="text-align: center;">
+                        {% for blog in blog %}
+                        <div class="col-md-4 mb-5 " style="text-align: center;font-size: small;">
                            <div class="card h-100">
-                             <img class="card-img-top" src="{{ url_for('static', filename='img/guy.jpg') }}">
-                             <div class="card-body">
-                               <a href="#"><h4 class="card-title">Title of the blog</h4></a>
-                               <span class="extra"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo illum a, fugiat nemo expedita exercitation </span>
-                             </div>
+                           {% set img=blog.image %}
+                           {% set path=blog.slug %}
+                           <a href="/{{ path }}"><img class="card-img-top" src="{{ url_for('static', filename=img) }}"></a>
+                           <div class="card-body">
+                              <a href="/{{ path }}"><h4 class="card-title">{{ blog.title }}</h4></a>
+                              <span class="extra">{{ blog.content | truncate(100) }} </span>
+                           </div>
                            </div>
                          </div>
                          {% endfor %} 
