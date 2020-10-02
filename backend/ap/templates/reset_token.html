@@ -1,0 +1,46 @@
+{% extends "login_layout.html" %}
+{% block content %}
+	
+		
+        <div class= "login-form">
+            <form method= "post">
+                <h1>LOGIN</h1>
+                
+                <div class="form-field txtb" type ="password"  placeholder="Password">
+                {{ form.password.label( class="form-control-label" ) }}
+
+                            {% if form.password.errors %}
+                                {{ form.password( class="form-control form-control-lg is-invalid" ) }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                            {% else %}  
+                                {{ form.password( class="form-control form-control-lg" ) }}
+                            {% endif %}
+                </div>
+                
+                <div class="form-field txtb" type ="confirm_password"  placeholder="Confirm Password" style="border-style: none;">
+                {{ form.confirm_password.label( class="form-control-label" ) }}
+
+                            {% if form.confirm_password.errors %}
+                                {{ form.confirm_password( class="form-control form-control-lg is-invalid" ) }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.confirm_password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                            {% else %}  
+                                {{ form.confirm_password( class="form-control form-control-lg" ) }}
+                            {% endif %}
+                </div>
+                <p><a href= "#">confirm_password?</a></p>
+                <input type="submit" value="Login" class="login-btn">
+                <div class="form-field p-t-10">
+                            {{ form.submit(class="btn btn-outline-info") }}
+                        </div>
+                <a href= "{{ url_for('signup')}}">New User? </a>
+            </form>
+        </div>
+{% endblock content %}

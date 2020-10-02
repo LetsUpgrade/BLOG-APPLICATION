@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block body %}
+<!-------------------PROFILE SECTION--------------->
+<style>
+   .card:hover {
+  margin-top: -5px;
+  transition: all 0.2s ease-in-out;
+  box-shadow:  -12px 1px 140px -14px rgba(117, 117, 199, 0.514);
+  background-clip: padding-box;
+   }
+  
+</style>
+<div class="container">
+      <section class="intro-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-1 col-lg-2"></div>
+               <div class="col-md-10 col-lg-8">
+                  <div class="intro">
+                     {% set dp=prof.dp %}
+                     <div class="profile-img"><img src="{{ url_for('static', filename = dp) }}" alt="img"></div>
+                     <h2><b>{{prof.username}}</b></h2>
+                     <h4 class="font-blue">Content Writer</h4>
+                     <br />
+                     <h5 class="font-lite-black">{{prof.about}}</h5>
+                     <div class="profile-btn">
+                        <button class="messagebtn" id="messageBtn"><i class="fa fa-comment"></i> Message</button>
+                        <button class="followbtn" id="followbtn"><i class="fa fa-plus"></i> Follow</button>
+                     </div>
+                     <div class="information margin-tb-30 mx-auto">
+                        <div class="stats">
+                           <span class="followers">
+                           <span class="value">{{prof.followers}}</span>
+                           <span class="label">Followers</span>
+                           </span> 
+                           <span class="following">
+                           <span class="value">{{prof.following}}</span>
+                           <span class="label">Following</span>
+                           </span>
+                           <span class="stories">
+                           <span class="value">{{prof.post_no}}</span>
+                           <span class="label">Posts</span>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row my-2">
+                        {% for blog in blog %}
+                        <div class="col-md-4 mb-5 " style="text-align: center;font-size: small;">
+                           <div class="card h-100">
+                           {% set img=blog.image %}
+                           {% set path=blog.slug %}
+                           <a href="/{{ path }}"><img class="card-img-top" src="{{ url_for('static', filename=img) }}"></a>
+                           <div class="card-body">
+                              <a href="/{{ path }}"><h4 class="card-title">{{ blog.title }}</h4></a>
+                              <span class="extra">{{ blog.content | truncate(100) }} </span>
+                           </div>
+                           </div>
+                         </div>
+                         {% endfor %} 
+                     </div>
+                     <div class="row mx-auto" style="text-align: center ;">
+                     <ul class="social-icons">
+                        <li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+                        <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                     </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br />
+      <br />
+</div>
+
+      <!------------------JAVASCRIPT----------->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% endblock %}
