@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block body %}
+            
+            
+    <div class="bar">
+
+    <h2>  &#160;Profile Account Setting </h2>
+    <br>
+   
+
+
+    <nav class="navbar navbar-inverse    navbar-light"  >
+                 <div class="container-fluid">
+                     <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>                       
+                   </button>
+                    <a class="navbar-brand" href="#"></a>
+                     </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                   <ul class="nav navbar-nav">
+                     <li class="active"><a href="#"><i class="fa fa-cog" aria-hidden="true" > </i>  General</a></li>
+                  
+                  
+                     </ul>
+     
+                   </div>
+                   </div>
+                      </nav>
+   
+                    
+   
+
+          <div class="container mx-auto">   
+                              <div class="right-bar">
+
+                              <h3>General Account Setting </h3>
+            <form method='POST' action="{{ url_for('settings', id=id) }}">              
+            <label for="name">Name:</label><br />
+            <input type="text" placeholder="Name" class="text" id='name' name='name' style="border: 0px; border-bottom: 1px solid black"><br />
+            <br />
+            <label for="designation">Designation:</label><br />
+            <input type="text" placeholder="Designation" class="text" id='designation' name='designation' style="border: 0px; border-bottom: 1px solid black"><br />
+            <br />
+            <label for="bio">Bio:</label><br />
+            <input type="textarea" placeholder="Write something about you.." class="text" id='about' name='about' style="border: 0px; border-bottom: 1px solid black"><br />
+            <br />
+            <label for="img">Select Image:</label><br />
+            <input type="file" name="image_file" id="image_file"  accept="image/*"><br />
+            
+            <button class="btn btn-primary">Update</a></button>
+            </form> 
+
+                               </div>
+
+
+    </div>
+  </div>
+
+       
+{% endblock %}
