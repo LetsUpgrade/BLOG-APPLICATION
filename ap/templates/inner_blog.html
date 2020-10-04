@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block body %}
+    <body>
+        <!------------------------------------Home Banner Area------------------------------------>
+        {% set img=blog.image %}
+        <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+				<div class="container">
+					<div class="banner_content text-center">
+						<div class="page_link">
+							<a href="/">Home</a>
+							<a href="#">Post Details</a>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        
+        
+        <!----------------------------------------Blog Area ------------------------------------->
+        <section class="blog_area p_120 single-post-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+       					<div class="main_blog_details">
+                            
+                            {% set dp=prof.image_file %}
+       						<img class="img-fluid" src="{{ dp }}" alt="">
+       						<a href="#"><h4>{{ blog.title }}</h4></a>
+       						<div class="user_details">
+       							<div class="float-left">
+       								<!-- <a href="#">Lifestyle &nbsp;</a>
+       								<a href="#">Travel &nbsp;</a><br> -->
+       							</div>
+       							<div class="float-right">
+       								<div class="media">
+       									<div class="media-body">
+       										
+       									</div>
+       									<div class="d-flex">
+       										<!-- <img src="{{  url_for('static', filename='img/blogimg/blog/user-img.jpg')  }}" alt=""> -->
+       									</div>
+       								</div>
+       							</div>
+                               </div>
+                            <div>   
+                                <p>{{ blog.content }}</p><br><br><br><p>{{ date_posted }}</p><br><br>
+      						<div class="news_d_footer">
+      							<a href="#"><i class="lnr lnr lnr-heart"></i>&nbsp; Lorem and 9 people like this</a>
+      							<a class="justify-content-center ml-auto" href="#"><i class="lnr lnr lnr-bubble"></i>&nbsp; 09 Comments</a><br><br>
+      							<div class="news_socail ml-auto">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-youtube-play"></i></a>
+									<a href="#"><i class="fa fa-pinterest"></i></a>
+									<a href="#"><i class="fa fa-rss"></i></a>
+								</div>
+      						</div>
+       					</div>
+       					</div>
+                        <!--------------------------------------------------Comment Form-------------------------->	                                             				
+                        <br><br>
+                        <div class="comment-form">
+                            <h4>Leave a Reply</h4>
+                            <form>
+                                <div class="form-group form-inline">
+                                  <div class="form-group col-lg-6 col-md-6 name">
+                                    <input type="text" class="form-control" id="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'">
+                                  </div>
+                                  <div class="form-group col-lg-6 col-md-6 email">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'">
+                                  </div>										
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control mb-10" rows="5" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+                                </div>
+                                <a href="#" class="primary-btn submit_btn">Post Comment</a>	
+                            </form>
+                        </div>
+        			</div>
+
+                    <div class="col-lg-4">
+                        <div class="blog_right_sidebar">
+                            <aside class="single_sidebar_widget search_widget">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search Posts">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
+                                    </span>
+                                </div>
+                                <div class="br"></div>
+                            </aside>
+
+                            <!--------------------------------------About Writer------------------------------->
+
+                            <aside class="single_sidebar_widget author_widget">
+                                <img class="author_img rounded-circle" src="{{  url_for('static', filename=dp)  }}" alt="">
+                                <h4>Lorem Ipsum</h4>
+                                <p>Blog Writer</p>
+                                <div class="social_icon">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-github"></i></a>
+                                    <a href="#"><i class="fa fa-behance"></i></a>
+                                </div>
+                               
+                                <div class="br"></div>
+                            </aside>
+
+                            <!-------------------------------Trending Posts----------------------------------->
+
+
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{{  url_for('static', filename='js/jquery-3.2.1.min.js')  }}"></script>
+        <script src="{{  url_for('static', filename='js/popper.js')  }}"></script>
+        <script src="{{  url_for('static', filename='js/bootstrap.min.js')  }}"></script>
+        
+        
+    {% endblock %}
+</html>
