@@ -23,17 +23,17 @@ def inner_blog(slug):
 @app.route("/settings/<string:id>", methods = ['GET','POST'])
 @login_required
 def settings(id):
-	prof = User.query.filter_by(id=id).first()
+	
 	if(request.method=='POST'):
-		name = request.form.get('name')
-		designation = request.form.get('designation')
-		about = request.form.get('about')
-		image_file = request.form.get('image_file')
-		changes = User(name=name, designation=designation, about=about, image_file=image_file,id = prof.id, username = prof.username, email = prof.email, password = prof.password, post_no = prof.post_no, following = prof.following, followers = prof.followers )
+		User.name = request.form.get('name')
+		User.designation = request.form.get('designation')
+		User.about = request.form.get('about')
+		User.image_file = request.form.get('image_file')
+		# changes = User(name=name, designation=designation, about=about, image_file=image_file,id = current_user.id, username = current_user.username, email = current_user.email, password = current_user.password, post_no = current_user.post_no, following = current_user.following, followers = current_user.followers )
 			
-		# db.session.add(changes)
+		
 		db.session.commit()
-	return render_template('setting.html', title = 'Profile Settings', prof = prof,user=current_user, id=id)
+	return render_template('setting.html', title = 'Profile Settings',user=current_user, id=id)
 
 
 
@@ -47,7 +47,7 @@ def create_blog(username):
 		content = request.form.get('content')
 		img_file = request.form.get('img_file')
 		title = title.replace(' ','-')
-		slug = current_user.username + title
+		slug = current_user.username + '-' + title
 		post = Post(title = title, content = content, user_id = current_user.username, slug = slug)
 		db.session.add(post)
 		db.session.commit()

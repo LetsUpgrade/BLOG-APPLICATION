@@ -152,15 +152,17 @@
 
    <!-- <body> -->
       <!-----------------------------------------Slider Carousel-------------------------------->
-      {% for post in posts %}
+      
       <section class="post_slider_area">
          <div class="post_slider_inner owl-carousel">
             <div class="item">
+               {% for post in posts %}
                <div class="post_s_item">
                   <div class="post_img">
-                     <img src="{{ url_for('static', filename='img/post-slider/post-cat-1.jpg') }}" alt="">
+                     {% set img='img/'+ post.image_file %}
+                     <img src="{{ url_for('static', filename= img) }}" alt="">
                   </div>
-                  <div class="post_text">
+                  <div class="post-text">
                      <a href="/post/{{ post.slug }}">
                         <h4>{{ post.title }}</h4>
                      </a>
@@ -170,9 +172,10 @@
                      </div>
                   </div>
                </div>
+               {% endfor %}
             </div>
       </section>
-      {% endfor %}
+      
 
      <!---------------------------------Articles------------------------------------>
 
