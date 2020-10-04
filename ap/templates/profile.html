@@ -17,7 +17,7 @@
                <div class="col-md-1 col-lg-2"></div>
                <div class="col-md-10 col-lg-8">
                   <div class="intro">
-                     {% set dp=user.image_file %}
+                     {% set dp='img/'+user.image_file %}
                      <div class="profile-img"><img src="{{ url_for('static', filename = dp) }}" alt="img"></div>
                      <h2><b>{{user.name}}</b></h2>
                      <h4 class="font-blue">{{user.designation}}r</h4>
@@ -47,7 +47,7 @@
                         {% for blog in blog %}
                         <div class="col-md-4 mb-5 " style="text-align: center;font-size: small;">
                            <div class="card h-100">
-                           {% set img=blog.image_file %}
+                           {% set img='img/'+ blog.image_file %}
                            {% set path=blog.slug %}
                            <a href="/{{ path }}"><img class="card-img-top" src="{{ url_for('static', filename=img) }}"></a>
                            <div class="card-body">
